@@ -11,7 +11,7 @@ header {
     background-color: #2b2e35;
     color: #88c5c7;
 }
-
+/* changes the h1 with my name in it to the left and change background */
 header h1 {
     display: inline;
     position:absolute;
@@ -22,6 +22,8 @@ header h1 {
     color: #2b2e35;
     font-size: 48px;
 }
+
+/* change the way the list looks and put it to right side and changes colors when you hover over a link */
 
 nav {
     margin-right: 20px;
@@ -53,6 +55,7 @@ a {
     border-bottom: 4px solid #88c5c7;
     padding: 10px;
 }
+/*adds in the image under the header and styles it*/
 .img-under-header {
     height: 250px;
     width: 100%;
@@ -62,50 +65,31 @@ a {
     background-position:center;
     position: relative;
 }
-
+/*this is for the caption of the image*/
 .img-under-header h2{
     z-index: 1000;
     background-color: #88c5c7;
-    position:fixed;
-    padding: 10px;
     position:absolute;
+    padding: 10px;
     right: 50px;
     bottom: 20px;
 }
-/*
-.body .box{
-    display: flex;
-    flex-direction: column;
-}
-
-.box-column{
-    width: 25%;
-    text-align: right;
-}
-
-.box-column h1{
-    border-right: 3px solid #24363f;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: #24363f;
-    font-size: 48px;
-}
-*/
+/*this sets right margin to be further awawy from edge */
 section{
-    margin: 0 10% 0 10%;
+    margin: 0 10% 0 0;
 }
-
+/* the giant flexbox that contains the main sections */
 .big-column-fb{
     display: flex;
     flex-direction: column;
 }
-
+/*smaller flexboxes to hold the content inside the sections */
 .small-row-fb{
     display: flex;
     flex-direction: row;
     padding-bottom: 40px;
 }
-
+/* styleing for */
 .small-row-fb h1{
     border-right: 3px solid #3c4f6a;
     padding: 10px;
@@ -116,13 +100,14 @@ section{
     text-align: right;
     min-width: 25%;
 }
-
+/* styling for the p tag in about my section */
 .about-me{
     width: 100%;
     padding-left: 20px;
     color: #3c4f6a;
     line-height: 20px;
 }
+/* puts a slightly opaque overlay over the image links that dissapoears when moused over */
 #overlay{
     position:absolute;
     height: 100%;
@@ -137,10 +122,8 @@ section{
 
 #overlay:hover{
     opacity: 0;
-    
-    
 }
-
+/* styling for the image links */
 .icons{
     display: flex;
     flex-wrap: wrap-reverse;
@@ -152,8 +135,6 @@ section{
 
 }
 
-
-
 .icons li{
     position:relative;
     width: 33%;
@@ -161,20 +142,21 @@ section{
     margin: 10px;
     cursor: pointer;
 }
+
 .icons li:last-child{
     height: 400px;
 }
+
 .icons img{
     border: 5px solid #88c5c7;
     height: 175px;
     min-height: 100%;
     min-width: 100%;
     object-fit: cover;
-    /* padding: 15px; */
     cursor: pointer;
     
 }
-
+/*styling for the captions on the images*/
 .picture-box{
     z-index: 12;
     background-color: #88c5c7;
@@ -196,10 +178,8 @@ section{
     margin-bottom: 0;
 }
 
-
+/* styling for the links in contact me section */
 .contact-links {
-    /* margin-right: 20px; */
-    float: right;
     width: 100%;
     font-size: 16px;
     font-weight: bold;
@@ -224,4 +204,42 @@ section{
 .contact-links ul li a:hover{
     border-bottom: 4px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* Media Queries */
+/* changes the way the page looks when viewed on mobile */
+@media screen and (max-width: 768px) {
+    /* adjustments for heading and links for mobile */
+    header{
+        height: 50px;
+    }
+    header h1{
+        display: block;
+        position:absolute;
+        top: 0;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        text-align: center;
+    }
+    nav{
+        position: relative;
+        top: 40px;
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul{
+        display: flex;
+        flex-shrink: 1;
+    }
+    
+    .small-row-fb{
+        flex-direction: column;
+
+    }
+
 }
