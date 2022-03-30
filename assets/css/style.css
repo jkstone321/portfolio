@@ -132,6 +132,7 @@ section{
     width: 75%;
     padding-left: 20px;
     color: #3c4f6a;
+    margin-bottom: 50px;
 
 }
 
@@ -197,14 +198,13 @@ section{
 }
 
 .contact-links ul li {
-    display: inline;
     margin-left: 5px;
-    padding: 0 5px 0 5px;
+    padding: 0;
 }
 .contact-links ul li a:hover{
     border-bottom: 4px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
-}
+} 
 
 
 
@@ -218,10 +218,10 @@ section{
         height: 50px;
     }
     header h1{
-        display: block;
+        display: inline-block;
         position:absolute;
         top: 0;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 0px 10px 0px;
         width: 100%;
         text-align: center;
     }
@@ -234,7 +234,10 @@ section{
     }
     nav ul{
         display: flex;
-        flex-shrink: 1;
+        flex-shrink: 2;
+    }
+    nav ul li{
+        padding: 0;
     }
     
     /* changes to main content to show title above the content rather than the left side */
@@ -267,5 +270,14 @@ section{
     }
     #overlay{
         height: 175%
+    }
+    /* contact links adjustments */
+    .contact-links li{
+        font-size: 14px;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    .contact-links ul{
+        padding-left: 15px;
     }
 }
