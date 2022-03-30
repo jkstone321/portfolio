@@ -112,7 +112,7 @@ section{
     position:absolute;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(96, 99, 145, 0.5);
     z-index: 10;
     margin: auto;
     top: 5px;
@@ -237,9 +237,35 @@ section{
         flex-shrink: 1;
     }
     
+    /* changes to main content to show title above the content rather than the left side */
     .small-row-fb{
+        display: flex;
         flex-direction: column;
-
     }
-
+    .small-row-fb h1{
+        margin-left: 20px;
+        border-right: 0;
+        border-bottom: 3px solid #3c4f6a;
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+    }
+    /* pictures to be same size and stacked on each other */
+    .icons li{
+        width: 100%;
+        height: 100px;
+        margin: 50px auto;
+    }
+    .icons{
+        width: 100%;
+    }
+    .icons li:last-child{
+        height: 100px;
+    }
+    .picture-box{
+        top: -150px;
+    }
+    #overlay{
+        height: 175%
+    }
 }
